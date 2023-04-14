@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>random Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <span id="display"></span>
+        <button id="button">Generate Random Number</button>
+    </div>
+  <script>
+    let button=document.getElementById("button")
+    let display=document.getElementById("display")
+
+    function random(){
+            setTimeout(function () {
+                display.innerText=3;
+                display.style.fontSize="2rem";
+                display.className="counter"
+            },1000)
+            setTimeout(function () {
+                display.innerText=2;
+                display.style.fontSize="2rem";
+                display.className="counter"
+            },2000)
+            setTimeout(function () {
+                display.innerText=1;
+                display.style.fontSize="2rem";
+                display.className="counter"
+            },3000)
+            setTimeout(function () {
+                display.innerText=` Random Number :${Math.floor(Math.random()*100 )}`;
+                display.style.fontSize="1.5rem";
+                display.className="display"
+            },4000)
+            setTimeout(function(){
+                button.innerText="Generate Random Number"
+            },4000)
+
+        }
+
+    button.addEventListener("click",function(){
+        button.innerText="Wait....";
+        random()
+    })
+  </script>
+
+</body>
+</html>
